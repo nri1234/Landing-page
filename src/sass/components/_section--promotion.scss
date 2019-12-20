@@ -1,0 +1,159 @@
+.section-promotion {
+  padding: 0 0 5rem;
+
+  .image-boxes {
+    height: 420px;
+
+    .image-overlay {
+      background: rgba(69, 73, 69, 0.3);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      padding-left: 30px;
+      padding-bottom: 30px;
+      color: $light;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      .text {
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 0;
+        margin: 0;
+      }
+
+      .text-big {
+        font-size: 50px;
+      }
+
+      .text-promotion {
+        border: 5px solid $light;
+        width: 120px;
+        padding: 5px 0;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .image-box-small {
+      background-color: $prom-image-bg;
+      height: 195px;
+    }
+
+    .image-box-small-top {
+      margin-bottom: 30px;
+    }
+
+    .image-box-small-bottom {
+      background-color: $prom-button;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: flex-start;
+      color: $dark;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .flex-item {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-left: 30px;
+    }
+
+    .flex-item-left {
+      height: 100%;
+      width: 25%;
+      background-image: url("../images/chair2.png");
+      background-size: 188px;
+      background-position: 160px 5px;
+      align-self: auto;
+    }
+
+    .flex-item-center {
+      height: 100%;
+      width: 50%;
+      align-self: auto;
+
+      .text {
+        font-size: 30px;
+        padding-bottom: 0;
+        margin: 0;
+      }
+
+      .text-coll {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .text-cash {
+        color: $primary;
+        font-weight: bold;
+      }
+    }
+
+    .flex-item-right {
+      height: 100%;
+      width: 25%;
+      background-image: url("../images/chair1.png");
+      background-size: 240px;
+      background-position: 189px 8px;
+    }
+
+    .flex-item-small {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-end;
+      flex: 3;
+
+      .text {
+        font-size: 18px;
+        padding: 0 15px 0 0;
+        margin: 0;
+      }
+
+      .text-prom {
+        font-size: 25px;
+        color: $primary;
+      }
+    }
+
+    .flex-item-small-left {
+      flex: 2;
+      background-image: url("../images/bed-1.png");
+      background-size: 340px;
+      background-position: 250px -70px;
+    }
+  }
+
+  .image-box {
+    padding: 30px;
+    background-image: url("https://h-design.pl/userdata/gfx/d9c5b2db781bb8da31dd6f84d78892ab.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-promotion {
+    .row {
+      div {
+        &:first-of-type {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "kodilla-projekt",
+  "name": "Landing page",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,7 +24,7 @@
       "git add"
     ]
   },
-  "author": "",
+  "author": "Norbert Mielczarek",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^5.12.0",

@@ -1,0 +1,140 @@
+.products-hide {
+  display: none;
+}
+
+.products {
+  .product-box {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    margin: 0 auto;
+    animation: fadein 2s;
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .photo {
+      position: relative;
+      padding: 80% 10px 0 0;
+      background: {
+        color: #f4f5f7;
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+      }
+      overflow: hidden;
+      align-items: flex-end;
+
+      .sale {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #292929;
+        border-radius: 50%;
+        color: #ffffff;
+        padding: 30px 15px 5px 15px;
+      }
+
+      .buttons {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: space-around;
+
+        .btn-main-small {
+          padding: 5px 10px;
+          background-color: rgba(0, 0, 0, 0);
+          color: rgba(0, 0, 0, 0);
+        }
+      }
+      &:hover {
+        .btn-main-small {
+          background-color: #292929;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .content {
+      text-align: center;
+      padding: 20px;
+
+      h5 {
+        color: $primary;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+      }
+
+      .stars {
+        direction: rtl;
+        a {
+          text-decoration: none;
+          color: rgb(42, 42, 42);
+          transition: 0.3s all;
+          @extend .far;
+          @extend .fa-star;
+          &.select {
+            @extend .fas;
+            color: rgb(42, 42, 42);
+          }
+          &:hover,
+          &:hover ~ a::before {
+            @extend .fas;
+            color: $primary;
+          }
+          &.full,
+          .full ~ a::before {
+            @extend .fas;
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    .line {
+      margin: 0 10px;
+      border-bottom: 1px solid #2a2a2a;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 30px;
+        border-bottom: 4px solid $primary;
+        transform: translateX(-50%);
+      }
+    }
+
+    .actions {
+      padding: 15px 10px 10px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .price {
+        .old-price {
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
+
+.tab-product {
+  cursor: pointer;
+
+  &.active {
+    width: 100%;
+    border-bottom: 4px solid $primary;
+  }
+}

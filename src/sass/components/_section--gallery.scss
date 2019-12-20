@@ -1,0 +1,350 @@
+.section--gallery {
+  padding: 3rem 0;
+
+  .gallery-container {
+    display: flex;
+    width: 100%;
+
+    .furniture-gallery {
+      height: 600px;
+      padding-right: 15px;
+      padding-left: 15px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .gallery {
+        height: 528px;
+
+        .gallery-image {
+          width: 100%;
+          height: 440px;
+          background-color: $image-bg;
+          border-style: solid;
+          border-color: $bar-border;
+          border-width: 0 2px 0 2px;
+          position: relative;
+
+          .gallery-tabs {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+
+            .tab-section {
+              width: 25%;
+              height: 45px;
+              background-color: $light;
+              border-style: solid;
+              border-color: $bar-border;
+              border-width: 2px 0 2px 2px;
+              text-transform: uppercase;
+              font-size: 18px;
+              letter-spacing: 1px;
+              line-height: 45px;
+              position: relative;
+              margin: 0;
+
+              &:hover {
+                cursor: pointer;
+              }
+            }
+
+            .tab-section-first {
+              border-left: none;
+            }
+
+            .active {
+              color: $primary;
+              background-color: $image-bg;
+              border-bottom: transparent;
+
+              &::before {
+                content: "";
+                position: absolute;
+                border-bottom: 4px solid $primary;
+                width: 103%;
+                top: -2px;
+                left: -2px;
+                z-index: 2;
+              }
+            }
+          }
+
+          .gallery-overlay {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 395px;
+            padding-left: 10px;
+            background-image: url("https://ae01.alicdn.com/kf/HTB1AdDem3oQMeJjy0Fpq6ATxpXan/Japanese-Low-Sofa-Armchair-Upholstery-Fabric-Wood-Legs-Living-Room-Furniture-Modern-Relax-Decorative-Accent-Arm.jpg_640x640.jpg");
+            background-size: cover;
+            background-position: center;
+
+            .gallery-icons {
+              display: flex;
+              flex-direction: column;
+
+              .icon-container {
+                display: flex;
+                align-items: center;
+
+                .icon-description {
+                  color: $light;
+                  background-color: $text-color;
+                  margin: 0 0 0 15px;
+                  font-size: 12px;
+                  padding: 3px 5px;
+                  position: relative;
+                  visibility: hidden;
+
+                  &::before {
+                    content: "";
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 6px 10.4px 6px 0;
+                    border-color: transparent $text-color transparent transparent;
+                    margin-right: 5px;
+                    position: absolute;
+                    left: -10px;
+                    top: 6px;
+                  }
+                }
+
+                .gallery-icon-gen {
+                  margin: 5px 0;
+
+                  &:hover {
+                    color: $primary;
+                    background-color: transparent;
+                    border-color: $primary;
+                  }
+
+                  &:hover + .icon-description {
+                    visibility: visible;
+                  }
+                }
+              }
+            }
+
+            .product-details {
+              position: relative;
+              display: flex;
+              flex-direction: column-reverse;
+              align-items: center;
+              align-self: flex-end;
+
+              .details-box {
+                height: 100px;
+                width: 250px;
+                background-color: $light;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 30px;
+                box-shadow: 1px 2px 37px 0.8px rgba(0, 0, 0, 0.45);
+
+                &::before {
+                  content: "";
+                  display: inline-block;
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  top: 0;
+                  left: 0;
+                  border-style: solid;
+                  border-width: 30px 30px 0 0;
+                  border-color: $dark transparent transparent transparent;
+                }
+
+                &::after {
+                  content: "";
+                  display: inline-block;
+                  position: absolute;
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: 0 0 30px 30px;
+                  border-color: transparent transparent #000000 transparent;
+                  right: 0;
+                  bottom: 30px;
+                }
+
+                h5 {
+                  font-size: 16px;
+                  line-height: 24px;
+                  letter-spacing: 1px;
+                }
+
+                .stars {
+                  a {
+                    text-decoration: none;
+                    color: rgb(42, 42, 42);
+                    @extend .far;
+                    @extend .fa-star;
+
+                    &.full {
+                      @extend .fas;
+                    }
+                  }
+                }
+              }
+
+              .details-circle {
+                height: 100px;
+                width: 100px;
+                background-color: rgba(123, 123, 124, 0.8);
+                border-radius: 50%;
+                position: absolute;
+                transform: translate(0, -110%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .price-new {
+                  font-size: 18px;
+                  margin: 0;
+                  color: white;
+                  font-weight: bold;
+                  letter-spacing: 1px;
+                }
+
+                .price-old {
+                  display: inline-flex;
+                  text-decoration: line-through;
+                  color: $light;
+                  margin: 0;
+                  font-size: 13px;
+                  letter-spacing: 1px;
+                }
+              }
+            }
+          }
+        }
+
+        .gallery-slider {
+          width: 100%;
+          height: 88px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border: 2px solid $bar-border;
+          padding: 0 5px 0 5px;
+        }
+
+        .slider-box {
+          height: 70px;
+          width: 30px;
+          background-color: $text-color;
+          color: $light;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .slider-box-arr {
+          &:hover {
+            cursor: pointer;
+            color: $primary;
+          }
+        }
+
+        .slider-image {
+          width: 70px;
+          background-color: $promoted-banner-bg;
+          opacity: 0.5;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          img {
+            width: 70px;
+            height: auto;
+            overflow: hidden;
+          }
+        }
+
+        .slider-active {
+          opacity: 1;
+        }
+      }
+    }
+
+    .big-picture-area {
+      height: 600px;
+      background-color: $picture-bg;
+      width: 50%;
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        object-fit: cover;
+      }
+
+      .text-area {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+
+        .text-price {
+          display: flex;
+          align-items: flex-end;
+          text-transform: uppercase;
+          font-size: 18px;
+          letter-spacing: 1px;
+          margin: 0;
+
+          .text-price-left {
+            margin: 0 10px 10px 0;
+          }
+
+          .text-price-right {
+            color: $gallery-price;
+            font-size: 40px;
+            letter-spacing: 1px;
+            margin: 0;
+            font-weight: bold;
+          }
+        }
+
+        .product-name {
+          color: $primary;
+          font-size: 40px;
+          letter-spacing: 1px;
+          margin: 0 0 20px;
+          font-weight: bold;
+        }
+
+        .shop-button {
+          background-color: $gallery-price;
+          color: $light;
+          text-transform: uppercase;
+          font-size: 14px;
+          z-index: 2;
+          height: 50px;
+          width: 140px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

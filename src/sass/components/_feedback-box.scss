@@ -1,0 +1,47 @@
+.feedback-box {
+  text-align: center;
+  padding: 0 8.33%;
+  margin-bottom: 4rem;
+
+  &::before {
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    content: "\f10e";
+  }
+
+  .quote {
+    font-size: 14px;
+    color: $feedback-text-color;
+    text-align: center;
+    line-height: 1.8;
+    margin: 2em 0;
+  }
+
+  .author {
+    color: $feedback-text-color;
+
+    .photo {
+      width: 60px;
+      height: 52px;
+      background-color: $feedback-text-color;
+      background-size: cover;
+      border-radius: 5px;
+    }
+
+    .name {
+      padding-left: 1em;
+
+      p {
+        font-size: 14px;
+        margin-bottom: 0.2em;
+
+        &:first-of-type {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
